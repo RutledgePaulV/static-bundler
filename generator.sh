@@ -4,7 +4,7 @@
 function create_package_json() {
 cat << "EOF" > ./package.json
 {
-  "name": "prototype",
+  "name": "app",
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
