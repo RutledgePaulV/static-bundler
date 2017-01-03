@@ -41,10 +41,10 @@ RUN mkdir -p /usr/share/wine/mono \
 	&& chmod +x /usr/share/wine/mono/wine-mono-$WINE_MONO_VERSION.msi
 
 
-RUN mkdir -p /home/user
-WORKDIR /home/user
+RUN mkdir -p /home/user/application
+WORKDIR /home/user/application
 COPY generator.sh .
 RUN ./generator.sh
 RUN npm install
 RUN npm install -g electron-packager
-ENTRYPOINT ["/home/user/release.sh"]
+ENTRYPOINT ["/home/user/application/release.sh"]

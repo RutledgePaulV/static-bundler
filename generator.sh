@@ -55,7 +55,7 @@ EOF
 
 
 function create_release_script() {
-cat << "EOF" > /home/user/release.sh
+cat << "EOF" > /home/user/application/release.sh
 #!/bin/bash
 USER_ID=${USER_ID}
 echo "Running process with UID : $USER_ID"
@@ -64,7 +64,7 @@ export HOME=/home/user
 chown -R user:user /home/user
 exec /usr/local/bin/gosu user /bin/bash -c 'rm -rf public/distributions && mkdir -p public/distributions && electron-packager . app --out public/distributions --all'
 EOF
-chmod +x /home/user/release.sh
+chmod +x /home/user/application/release.sh
 }
 
 create_package_json

@@ -5,7 +5,7 @@ A docker image that bundles static sites into apps for each operating system.
 ### Usage
 ```bash
 # from the directory containing your static site (starts at index.html)
-docker run -v $(pwd):/home/user/public -e USER_ID=$(id -u) rutledgepaulv/static-bundler
+docker run -v $(pwd):/home/user/application/public -e USER_ID=$(id -u) rutledgepaulv/static-bundler
 
 # you'll find your executables divided up by operating system inside the ./distributions directory
 ```
