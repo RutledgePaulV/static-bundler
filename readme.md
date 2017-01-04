@@ -1,6 +1,6 @@
 ## static bundler
 
-A docker image that bundles static sites into apps for each operating system.
+A docker image that bundles static sites into apps for the major operating systems.
 
 ### Usage
 ```bash
